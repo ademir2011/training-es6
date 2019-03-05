@@ -99,7 +99,7 @@ equipe.imprimeNomes();
 var equipe = {
   nome: "Valentes da Glória",
   membros: ["Luciano", "Maria", "Virgínia", "Daniela"],
-  imprimeNomes: function() {
+  imprimeNomes: () => {
     this.membros.forEach(membro =>
       console.log(`${membro} é da equipe ${this.nome}`)
     );
