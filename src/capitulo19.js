@@ -13,8 +13,8 @@ Exercício 2 - E que tudo mais vá para o inferno
 O que é callback hell e qual a sua relação com as Promises?
 */
 
-// Quando se é executao diversas vezes callbacks tendo um descontrole e assim
-// abrindo possibilidade de gerar error
+// Quando se é executado diversas vezes callbacks assíncronos tendo um descontrole e assim
+// abrindo possibilidade de gerar error. A promisses vinheram para resolver este problema
 
 /*
 Exercício 3 - Você cumpre as suas promessas?
@@ -65,3 +65,16 @@ simulaPromise(false, 1000); // not ok
 
 simulaPromise(true, 2000); // ok
 simulaPromise(false, 1000); // not ok
+
+/*
+Qual é o problema com o trecho de código a seguir? E como consertá-lo?
+
+// ...
+promise
+  .then((data) => console.log(`resultado positivo: ${data}`))
+  .then((data) => console.log(`resultado positivo 2: ${data}`))
+  .catch((data) => console.log(`resultado negativo: ${data}`));
+*/
+
+// Ocorre um problema pq no primeiro then não é retornado algum valor
+// para que o segundo then receba dados
